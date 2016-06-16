@@ -37,6 +37,9 @@
       </a>
      <?php if (is_front_page()) { ?></h1><?php } ?>
   </div>
+  <div class="selectLang">
+    <?php qtrans_generateLanguageSelectCode('dropdown', 'language'); ?>
+  </div>
 <!-- /#logo -->
 
 <?php if ( has_nav_menu( 'primary-nav' ) ) : ?>
