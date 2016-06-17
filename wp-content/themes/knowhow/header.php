@@ -62,7 +62,7 @@
         <input type="text" onfocus="if (this.value == '<?php echo of_get_option('st_search_text'); ?>') {this.value = '';}" onblur="if (this.value == '')  {this.value = '<?php echo of_get_option('st_search_text'); ?>';}" value="<?php echo of_get_option('st_search_text'); ?>" name="s" id="s" autocapitalize="off" autocorrect="off" autocomplete="off" />
         <i class="live-search-loading fa fa-spinner fa-spin"></i>
         <button type="submit" id="searchsubmit">
-          <i class='fa fa-search'></i><span><?php _e("Search", "framework") ?></span>
+          <i class='fa fa-search'></i><span><?php _e("[:en]Search: [:ru]Поиск:", "framework") ?></span>
         </button>
       </form>
       </div>

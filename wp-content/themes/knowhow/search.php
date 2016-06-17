@@ -13,7 +13,7 @@ if ($st_hp_sidebar == 'fullwidth') {
 } elseif ($st_hp_sidebar == 'sidebar-l') {
 	$st_hp_sidebar = 'sidebar-left';
 } elseif ($st_hp_sidebar == 'sidebar-r') {
-	$st_hp_sidebar = 'sidebar-right';	
+	$st_hp_sidebar = 'sidebar-right';
 } else {
 	$st_hp_sidebar = 'sidebar-right';
 }
@@ -31,10 +31,10 @@ $st_faq_slug = of_get_option('st_faq_slug');
 
 <ul id="search-result">
   <?php while (have_posts()) : the_post(); ?>
-  
+
   <?php
-	// Set search result class	
-	if ( has_post_format( 'video' )) { 
+	// Set search result class
+	if ( has_post_format( 'video' )) {
 	$st_search_class = 'video';
 	} elseif ( 'st_faq' == get_post_type() ) {
 	$st_search_class = 'faq';
@@ -50,13 +50,13 @@ $st_faq_slug = of_get_option('st_faq_slug');
   <?php } ?>
   </li>
   <?php endwhile; ?>
- 
+
 </ul>
 
 <?php } else { ?>
 
 <ul id="search-result">
-  <li class="nothing-here"><?php _e( "Sorry, no posts were found.", "framework" ); ?></li>
+  <li class="nothing-here"><?php _e( "[:en]Sorry, no posts were found. [:ru]К сожалению, не было найдено ни одной записи.", "framework" ); ?></li>
 </ul>
 
 <?php } ?>
@@ -67,20 +67,20 @@ $st_faq_slug = of_get_option('st_faq_slug');
 
 
 <!-- #primary -->
-<div id="primary" class="<?php echo $st_hp_sidebar; ?> clearfix"> 
+<div id="primary" class="<?php echo $st_hp_sidebar; ?> clearfix">
 <!-- .ht-container -->
 <div class="ht-container">
-  
+
 <!-- #content -->
 <section id="content" role="main">
-  
+
 <!-- #page-header -->
 <header id="page-header" class="clearfix">
-<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'framework' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-<p><?php _e( "Here's what we've found for you", "framework" ); ?></p>
+<h1 class="page-title"><?php printf( __( '[:en]Search Results for: [:ru]Результаты поиска для: %s', 'framework' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+<p><?php _e( "[:en]Here's what we've found for you [:ru]Вот что мы нашли для вас", "framework" ); ?></p>
 </header>
 <!-- /#page-header -->
-  
+
 <?php if ( have_posts() ) { ?>
 
 				<?php /* Start the Loop */ ?>

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- #primary -->
-<div id="primary" class="clearfix <?php if (of_get_option('st_hp_sidebar') == 'fullwidth') { echo 'sidebar-off'; } elseif (of_get_option('st_hp_sidebar') == 'sidebar-l') { echo 'sidebar-left'; } else { echo 'sidebar-right'; } ?>"> 
+<div id="primary" class="clearfix <?php if (of_get_option('st_hp_sidebar') == 'fullwidth') { echo 'sidebar-off'; } elseif (of_get_option('st_hp_sidebar') == 'sidebar-l') { echo 'sidebar-left'; } else { echo 'sidebar-right'; } ?>">
 <!-- .ht-container -->
 <div class="ht-container">
 
@@ -31,16 +31,16 @@
 								rewind_posts();
 
 							} elseif ( is_day() ) {
-								printf( __( 'Daily Archives: %s', 'framework' ), '<span>' . get_the_date() . '</span>' );
+								printf( __( '[:en]Daily Archives: [:ru]Архивы по дням: %s', 'framework' ), '<span>' . get_the_date() . '</span>' );
 
 							} elseif ( is_month() ) {
-								printf( __( 'Monthly Archives: %s', 'framework' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+								printf( __( '[:en]Monthly Archives: [:ru]Архивы по месяцам: %s', 'framework' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 							} elseif ( is_year() ) {
-								printf( __( 'Yearly Archives: %s', 'framework' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+								printf( __( '[:en]Yearly Archives: [:ru]Архивы по годам: %s', 'framework' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 							} else {
-								_e( 'Archives', 'framework' );
+								_e( '[:en]Archives [:ru]Архивы', 'framework' );
 
 							}
 						?>
@@ -60,7 +60,7 @@
 						}
 					?>
 </header>
-<!-- /#page-header --> 
+<!-- /#page-header -->
 
 
 <?php if ( have_posts() ) : ?>
@@ -72,7 +72,7 @@
 <?php endwhile; ?>
 
 <?php get_template_part( 'page', 'navigation' ); ?>
-  
+
 <?php else : ?>
 
 <?php get_template_part( 'no-results', 'index' ); ?>
@@ -85,7 +85,7 @@
 <?php } ?>
 
 </div>
-<!-- .ht-container --> 
+<!-- .ht-container -->
 </div>
 <!-- /#primary -->
 

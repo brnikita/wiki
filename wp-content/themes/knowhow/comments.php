@@ -22,7 +22,7 @@ if ( post_password_required() )
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h3 id="comments-title"><?php _e( 'Comments', 'framework' ); ?></h3>
+		<h3 id="comments-title"><?php _e( '[:en]Comments [:ru]Комментарии', 'framework' ); ?></h3>
 
 		<ol class="commentlist">
 			<?php wp_list_comments( array( 'callback' => 'st_comment', 'style' => 'ol' ) ); ?>
@@ -30,16 +30,16 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'framework' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'framework' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'framework' ) ); ?></div>
+			<h1 class="assistive-text section-heading"><?php _e( '[:en]Comment navigation [:ru]Навигация по комментариям', 'framework' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; [:en]Older Comments [:ru]Ранние комментарии', 'framework' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( '[:en]Newer Comments [:ru]Новые комментарии &rarr;', 'framework' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
 
 	<?php // If comments are closed and there are comments, let's leave a little note.
 		elseif ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="nocomments"><?php _e( 'Comments are closed.', 'framework' ); ?></p>
+		<p class="nocomments"><?php _e( '[:en]Comments are closed. [:ru]Комментарии закрыты.', 'framework' ); ?></p>
 	<?php endif; ?>
 
 <?php comment_form(); ?>
