@@ -2150,15 +2150,36 @@ Translate Dropdown
 #site-header .selectLang{
 	vertical-align: middle;
 	display: inline-block;
+	border: #337ab7 1px solid;
+	border-radius: 24px;
+	background: #fff;
+	color: #337ab7;
+	padding-left: 12px;
+	float: right;
+	margin-top: 20px;
+}
+
+#site-header .selectLang:before {
+	font-family: FontAwesome;
+	content: "\f107";
+	position: absolute;
+	color: inherit;
+	line-height: 34px;
 }
 
 #site-header .selectLang select{
-  font: 15px/24px 'Open Sans', Helvetica, Arial, sans-serif;
-	color: #4d4d4d;
-  background: #fff;
-  border: 1px solid #4d4d4d;
-  padding: 4px;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-webkit-appearance: none;
+	appearance: none !important;
+	border: none;
+	font: 15px/24px 'Open Sans', Helvetica, Arial, sans-serif;
+	padding: 4px;
 	margin: 0 10px;
+	color: inherit;
+	background: none;
+	border: none;
+	outline: none;
 }
 
 /*------------------------------------------------------------------------------
@@ -2249,6 +2270,10 @@ Responsive CSS
 	}
 	#page-header .page-title {
 	    font-size: 24px;
+	}
+
+	#site-header .selectLang{
+		float: none;
 	}
 
 } /* END Media Query */

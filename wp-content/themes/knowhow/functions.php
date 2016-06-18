@@ -15,26 +15,26 @@ if ( ! isset( $content_width ) ) $content_width = 980;
 */
 if ( ! function_exists( 'st_theme_setup' ) ):
 function st_theme_setup() {
-	
+
 	/**
 	* Make theme available for translation
 	* Translations can be filed in the /languages/ directory
 	*/
 	load_theme_textdomain( 'framework', get_template_directory() . '/languages' );
-	
+
 
 	/**
 	* Add default posts and comments RSS feed links to head
 	*/
 	add_theme_support( 'automatic-feed-links' );
-	
+
 	/**
 	* Enable support for Post Thumbnails
 	*/
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 60, 60 );
-	add_image_size( 'post', 150, 150, false ); // Post thumbnail	
-	
+	add_image_size( 'post', 150, 150, false ); // Post thumbnail
+
 	/**
 	* Register menu locations
 	*/
@@ -42,14 +42,14 @@ function st_theme_setup() {
 			'primary-nav' => __( 'Primary Menu', 'framework' ),
 			'footer-nav' => __( 'Footer Menu', 'framework' )
 	));
-	
+
 	/**
 	* Add Support for post formarts
 	*/
 	add_theme_support( 'post-formats', array( 'video' ) );
-	
+
 	// This theme uses its own gallery styles.
-	add_filter( 'use_default_gallery_style', '__return_false' );	
+	add_filter( 'use_default_gallery_style', '__return_false' );
 
     /*
      * Let WordPress manage the document title.
@@ -69,7 +69,7 @@ function st_theme_setup() {
 
     // This is a hero theme
     add_theme_support('ht-hero-theme');
-	
+
 }
 endif; // st_theme_setup
 add_action( 'after_setup_theme', 'st_theme_setup' );
@@ -86,7 +86,7 @@ if ( !function_exists( 'optionsframework_init' ) ) {
 
 /**
 * Cleanup Functions
-*/ 
+*/
 require("framework/cleanup.php");
 
 /**
@@ -146,7 +146,7 @@ require("framework/register-sidebars.php");
 
 /**
  * Add Widget Functions
- */ 
+ */
 require("framework/widgets/widget-functions.php");
 
 /**
@@ -249,3 +249,13 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) :
     add_action( 'wp_head', 'theme_slug_render_title' );
 endif;
 
+function CPT1_join( $join ) {
+    global $wpdb;
+    $join = " JOIN pav_icl_translations t ON t.element_id = pav_posts.ID AND t.element_type='CUSTOM_POST_TYPE1' ";
+    return $join ;
+}
+
+function CPT2_join( $join ) {
+    global $wpdb;
+    return $join = " JOIN pav_icl_translations t ON t.element_id = pav_posts.ID AND t.element_type='CUSTOM_POST_TYPE2' ";
+}

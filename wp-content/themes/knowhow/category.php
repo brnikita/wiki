@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- #primary -->
-<div id="primary" class="clearfix <?php if (of_get_option('st_hp_sidebar') == 'fullwidth') { echo 'sidebar-off'; } elseif (of_get_option('st_hp_sidebar') == 'sidebar-l') { echo 'sidebar-left'; } else { echo 'sidebar-right'; } ?>"> 
+<div id="primary" class="clearfix <?php if (of_get_option('st_hp_sidebar') == 'fullwidth') { echo 'sidebar-off'; } elseif (of_get_option('st_hp_sidebar') == 'sidebar-l') { echo 'sidebar-left'; } else { echo 'sidebar-right'; } ?>">
 <!-- .ht-container -->
 <div class="ht-container">
 
@@ -18,7 +18,7 @@
 		echo apply_filters( 'category_archive_meta', $st_category_description );  ?>
 	<?php st_breadcrumb(); ?>
 </header>
-<!-- /#page-header --> 
+<!-- /#page-header -->
 
 <!-- #sub-cats -->
 <?php
@@ -31,19 +31,19 @@ $st_subcat_args = array(
   'child_of' => $st_sub_category_id,
   'pad_counts'  => 1
 );
-$st_sub_categories = get_categories($st_subcat_args); 
+$st_sub_categories = get_categories($st_subcat_args);
 $st_sub_categories = wp_list_filter($st_sub_categories,array('parent'=>$st_sub_category_id));
 
 if ($st_sub_categories) { ?>
 <ul class="sub-categories clearfix">
 <?php foreach($st_sub_categories as $st_sub_category) {  ?>
 <li><h4><a href="<?php echo get_category_link( $st_sub_category->term_id ) ?>"><?php echo $st_sub_category->name ?></a><?php if (of_get_option('st_hp_subcat_counts') == '1') {
-			echo '<span class="cat-count">(' . $st_sub_category->count.')</span>';	
+			echo '<span class="cat-count">(' . $st_sub_category->count.')</span>';
 		} ?></h4></li>
 <?php } ?>
 </ul>
 <?php } ?>
-<!-- #/sub-cats --> 
+<!-- #/sub-cats -->
 
 <?php
 $current_cat = intval( get_query_var('cat') );
@@ -67,7 +67,7 @@ query_posts($args);
 <?php endwhile; ?>
 
 <?php get_template_part( 'page', 'navigation' ); ?>
-  
+
 <?php else : ?>
   <?php if (!$st_sub_categories) { ?>
 <?php get_template_part( 'no-results', 'index' ); ?>
@@ -82,7 +82,7 @@ query_posts($args);
 <?php } ?>
 
 </div>
-<!-- .ht-container --> 
+<!-- .ht-container -->
 
 </div>
 <!-- /#primary -->

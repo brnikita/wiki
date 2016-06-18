@@ -3,11 +3,11 @@
 <?php ht_post_format_video() ?>
 
 <h2 class="entry-title"><a rel="bookmark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    
+
   <div class="entry-content">
     <?php the_excerpt(); ?>
   </div>
 
-  <a href="<?php the_permalink(); ?>" class="readmore" rel="nofollow"><?php _e( 'Read More', 'framework' ); ?><span> &rarr;</span></a>
+  <a href="<?php the_permalink(); ?>" class="readmore" rel="nofollow"><?php _e( '[:en]Read More [:ru]Далее', 'framework' ); ?><span> &rarr;</span></a>
 
 </article>
