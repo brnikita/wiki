@@ -27,15 +27,70 @@
   <?php echo of_get_option('st_footer_copyright'); ?>
   <?php } ?>
   </small>
-  
+
 </div>
 <!-- /.ht-container -->
-</footer> 
+</footer>
 <!-- /#site-footer -->
 
 <!-- /#site-container -->
 </div>
 
 <?php wp_footer(); ?>
+<?php $currentLangCat = qtrans_getLanguage(); ?>
 </body>
+<script type="text/javascript">
+  jQuery(document).ready(function () {
+    var loc = '<?php echo $currentLangCat ?>';
+    if (loc == 'ru') {
+      var newMonth;
+      var monthT;
+      jQuery('#sidebar .widget_archive ul li').each(function( index ) {
+        monthT = jQuery(this).find('a');
+        monthT = monthT.text();
+        var monthArr = monthT.split(' ');
+        switch (monthArr[0]) {
+           case 'January':
+            newMonth = 'Январь';
+            break;
+           case 'February':
+             newMonth = 'Февраль';
+             break;
+           case 'March':
+             newMonth = 'Март';
+             break;
+           case 'April':
+             newMonth = 'Апрель';
+             break;
+           case 'May':
+             newMonth = 'Май';
+             break;
+           case 'June':
+             newMonth = 'Июнь';
+             break;
+           case 'July':
+             newMonth = 'Июль';
+             break;
+           case 'August':
+             newMonth = 'Август';
+             break;
+           case 'September':
+             newMonth = 'Сентябрь';
+             break;
+           case 'October':
+             newMonth = 'Октябрь';
+             break;
+           case 'November':
+             newMonth = 'Ноябрь';
+             break;
+           case 'December':
+             newMonth = 'Декабрь';
+             break;
+        }
+        jQuery(this).find('a').html(newMonth + ' ' + monthArr[1]);
+      });
+
+    }
+  });
+</script>
 </html>
