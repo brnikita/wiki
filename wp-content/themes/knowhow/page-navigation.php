@@ -9,10 +9,10 @@
 <?php st_pagination(); ?>
 
       <div class="nav-next">
-        <?php next_posts_link(__('Older Entries &rarr;', 'framework')); ?>
+        <?php next_posts_link(__('[:en]Older Entries &rarr;[:ru]Ранние записи &rarr;', 'framework')); ?>
       </div>
-      
-      <!-- /.page-navigation --> 
-      
+
+      <!-- /.page-navigation -->
+
       </div>
 <?php } ?>

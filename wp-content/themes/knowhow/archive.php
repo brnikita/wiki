@@ -31,13 +31,13 @@
 								rewind_posts();
 
 							} elseif ( is_day() ) {
-								printf( __( '[:en]Daily Archives: [:ru]Архивы по дням: %s', 'framework' ), '<span>' . get_the_date() . '</span>' );
+								printf( __( '[:en]Daily Archives:  %s [:ru]Архивы по дням: %s', 'framework' ), '<span>' . get_the_date() . '</span>' );
 
 							} elseif ( is_month() ) {
-								printf( __( '[:en]Monthly Archives: [:ru]Архивы по месяцам: %s', 'framework' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+								printf( __( '[:en]Monthly Archives: %s [:ru]Архивы по месяцам: %s', 'framework' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
 							} elseif ( is_year() ) {
-								printf( __( '[:en]Yearly Archives: [:ru]Архивы по годам: %s', 'framework' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+								printf( __( '[:en]Yearly Archives: %s [:ru]Архивы по годам: %s', 'framework' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
 							} else {
 								_e( '[:en]Archives [:ru]Архивы', 'framework' );

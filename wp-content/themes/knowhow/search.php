@@ -76,7 +76,7 @@ $st_faq_slug = of_get_option('st_faq_slug');
 
 <!-- #page-header -->
 <header id="page-header" class="clearfix">
-<h1 class="page-title"><?php printf( __( '[:en]Search Results for: [:ru]Результаты поиска для: %s', 'framework' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+<h1 class="page-title"><?php printf( __( '[:en]Search Results for: %s [:ru]Результаты поиска для: %s', 'framework' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 <p><?php _e( "[:en]Here's what we've found for you [:ru]Вот что мы нашли для вас", "framework" ); ?></p>
 </header>
 <!-- /#page-header -->

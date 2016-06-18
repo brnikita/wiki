@@ -78,7 +78,7 @@ echo '</div><div class="row">';} elseif ($st_cat_counter == 1)
 { echo '<div class="row">';}
 
     echo '<div class="column col-half '. $st_cat_counter.'">';
-    echo '<h3> <a href="' . get_category_link( $st_category->term_id ) . '" title="' . sprintf( __( '[:en]View all posts in [:ru]Просмотреть все записи в %s', 'framework' ), $st_category->name ) . '" ' . '>' . $st_category->name.'</a>';
+    echo '<h3> <a href="' . get_category_link( $st_category->term_id ) . '" title="' . sprintf( __( '[:en]View all posts in %s [:ru]Просмотреть все записи в %s', 'framework' ), $st_category->name ) . '" ' . '>' . $st_category->name.'</a>';
 	if (of_get_option('st_hp_cat_counts') == '1') {
 	// echo '<span class="cat-count">(' . $st_category->count.')</span>';
 	echo '<span class="cat-count">(' . $countCatLang .')</span>';
